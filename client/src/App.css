@@ -1,66 +1,143 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background: #f1f5f9;
-  color: #1e293b;
+html {
+  scroll-behavior: smooth;
 }
 
-.container {
+body {
+  font-family: Arial, sans-serif;
+  background: #080d1b;
+  color: white;
+}
+
+.app {
   min-height: 100vh;
 }
 
-header {
-  background: #172554;
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 8%;
+  background: #101a30;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: #5ee7ff;
+}
+
+.logo span {
   color: white;
+}
+
+.navbar h2 {
+  margin-right: auto;
+  font-size: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  min-height: 570px;
+  padding: 110px 10%;
   text-align: center;
-  padding: 35px 15px;
+  background: linear-gradient(135deg, #101a30, #142d50, #080d1b);
 }
 
-header h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
+.tag {
+  color: #5ee7ff;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
 }
 
-main {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  text-align: center;
+.hero h1 {
+  font-size: clamp(42px, 8vw, 85px);
+  letter-spacing: 4px;
 }
 
-main h2 {
-  margin-bottom: 15px;
+.hero h1 span {
+  color: #5ee7ff;
 }
 
-.events {
-  margin-top: 40px;
+.hero h2 {
+  margin-top: 20px;
+  font-size: 25px;
 }
 
-.event-card {
-  background: white;
-  padding: 25px;
+.description {
+  max-width: 650px;
+  margin: 22px auto;
+  color: #c5d0e0;
+  line-height: 1.8;
+}
+
+.status {
+  display: inline-block;
   margin: 20px 0;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px #00000015;
+  padding: 12px 22px;
+  border: 1px solid #315d75;
+  border-radius: 30px;
+  color: #a9f5d0;
+  background: #102b35;
 }
 
-.event-card h3 {
-  color: #1d4ed8;
-  margin-bottom: 12px;
+.dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: #35e69a;
 }
 
-.event-card p {
-  margin: 8px 0;
+.explore {
+  display: block;
+  width: fit-content;
+  margin: 15px auto;
+  padding: 13px 28px;
+  border-radius: 6px;
+  background: #16a6c7;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.explore:hover {
+  background: #087d9b;
+}
+
+.about {
+  padding: 65px 10%;
+  text-align: center;
+}
+
+.about h2 {
+  color: #5ee7ff;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 700px;
+  margin: auto;
+  color: #c5d0e0;
+  line-height: 1.8;
 }
 
 footer {
-  background: #172554;
-  color: white;
+  padding: 25px;
   text-align: center;
-  padding: 20px;
+  background: #101a30;
+  color: #aab6c8;
 }
