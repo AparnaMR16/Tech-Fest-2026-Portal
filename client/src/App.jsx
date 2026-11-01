@@ -5,7 +5,7 @@ function App() {
   const [message, setMessage] = useState('Connecting to backend...');
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/health')
+    fetch(`${import.meta.env.VITE_API_URL}/api/health`)
       .then(response => response.json())
       .then(data => setMessage(data.message))
       .catch(() => setMessage('Backend connection failed'));
