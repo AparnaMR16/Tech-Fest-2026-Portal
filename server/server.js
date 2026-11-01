@@ -21,13 +21,13 @@ app.get('/api/health', (req, res) => {
 });
 
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URI)
-  .then(() => {
-    console.log('MongoDB connected successfully');
-  })
-  .catch((error) => {
-    console.log('MongoDB connection error:', error.message);
-  });
+if (process.env.MONGO_URI) {
+  mongoose.connect(process.env.MONGO_URI)
+    .then(() => console.log('MongoDB connected successfully'))
+    .catch((error) => console.log('MongoDB connection error:', error.message));
+} else {
+  console.log('Running without MongoDB');
+}
 
 // Server
 const PORT = process.env.PORT || 5000;
