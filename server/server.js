@@ -2,10 +2,19 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
+
 require('dotenv').config();
 
 const app = express();
-
+app.use(helmet());
+app.use(rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100,
+  standardHeaders: true,
+  legacyHeaders: false
+}));
 // Middleware
 app.use(cors({
   origin: process.env.CLIENT_ORIGIN || 'http://localhost:5173'
